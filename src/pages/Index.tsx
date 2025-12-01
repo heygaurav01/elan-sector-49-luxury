@@ -6,6 +6,7 @@ import LeadForm from "@/components/LeadForm";
 import Overview from "@/components/Overview";
 import Highlights from "@/components/Highlights";
 import Amenities from "@/components/Amenities";
+import Gallery from "@/components/Gallery";
 import FloorPlans from "@/components/FloorPlans";
 import Location from "@/components/Location";
 import Footer from "@/components/Footer";
@@ -21,8 +22,10 @@ const Index = () => {
       <HeroSection onEnquireClick={() => setIsLeadFormOpen(true)} />
 
       {/* Desktop Fixed Lead Form */}
-      <div className="hidden lg:block fixed right-8 top-1/2 -translate-y-1/2 z-40 w-96">
-        <LeadForm />
+      <div className="hidden lg:block fixed right-4 top-24 z-40 w-[420px]">
+        <div className="sticky top-24">
+          <LeadForm />
+        </div>
       </div>
 
       <div id="overview">
@@ -35,6 +38,10 @@ const Index = () => {
 
       <div id="amenities">
         <Amenities />
+      </div>
+
+      <div id="gallery">
+        <Gallery />
       </div>
 
       <div id="floor-plans">
