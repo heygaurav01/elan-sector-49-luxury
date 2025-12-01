@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { submitFormData } from "@/lib/api";
+import { trackContactForm } from "@/lib/analytics";
 
 const LeadForm = () => {
   const { toast } = useToast();
@@ -12,9 +14,9 @@ const LeadForm = () => {
     email: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!formData.name || !formData.phone) {
       toast({
         title: "Required fields missing",
@@ -33,16 +35,28 @@ const LeadForm = () => {
       return;
     }
 
-    toast({
-      title: "Thank you for your interest!",
-      description: "Our team will contact you shortly.",
+    const result = await submitFormData({
+      name: formData.name,
+      phone: formData.phone,
+      email: formData.email,
+      countryCode: "+91", // Assuming default country code
     });
 
-    setFormData({ name: "", phone: "", email: "" });
+    if (result.success) {
+      trackContactForm("contact");
+      // Redirect to thank-you page
+      window.location.href = "/thank-you.html";
+    } else {
+      toast({
+        title: "Submission Failed",
+        description: result.message,
+        variant: "destructive",
+      });
+    }
   };
 
   return (
-    <div className="bg-card border border-border rounded-lg shadow-lg p-6">
+    <div className="bg-white rounded-lg p-8 h-full flex flex-col justify-center">
       <h3 className="text-2xl font-bold mb-2 text-foreground">
         Register for Exclusive Offers
       </h3>

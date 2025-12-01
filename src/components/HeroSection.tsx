@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import hero1 from "@/assets/hero-1.png";
 import hero2 from "@/assets/hero-2.png";
+import LeadForm from "@/components/LeadForm";
 
 interface HeroSectionProps {
   onEnquireClick: () => void;
@@ -23,9 +24,8 @@ const HeroSection = ({ onEnquireClick }: HeroSectionProps) => {
       {images.map((img, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentImage ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute inset-0 transition-opacity duration-1000 ${index === currentImage ? "opacity-100" : "opacity-0"
+            }`}
         >
           <img
             src={img}
@@ -36,8 +36,8 @@ const HeroSection = ({ onEnquireClick }: HeroSectionProps) => {
         </div>
       ))}
 
-      <div className="relative z-10 container mx-auto px-4 h-full flex items-center">
-        <div className="max-w-3xl text-white">
+      <div className="relative z-10 container mx-auto px-4 h-full flex items-center justify-between">
+        <div className="max-w-2xl text-white">
           <h1 className="text-5xl md:text-7xl font-bold mb-4 animate-fade-in">
             4 BHK Luxury Apartments
           </h1>
@@ -55,6 +55,10 @@ const HeroSection = ({ onEnquireClick }: HeroSectionProps) => {
             Enquire Now
           </Button>
         </div>
+
+        <div className="hidden lg:block w-[450px] bg-white rounded-lg shadow-2xl">
+          <LeadForm />
+        </div>
       </div>
 
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
@@ -62,9 +66,8 @@ const HeroSection = ({ onEnquireClick }: HeroSectionProps) => {
           <button
             key={index}
             onClick={() => setCurrentImage(index)}
-            className={`w-3 h-3 rounded-full transition-all ${
-              index === currentImage ? "bg-primary w-8" : "bg-white/50"
-            }`}
+            className={`w-3 h-3 rounded-full transition-all ${index === currentImage ? "bg-primary w-8" : "bg-white/50"
+              }`}
             aria-label={`Go to image ${index + 1}`}
           />
         ))}

@@ -18,13 +18,10 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      
+
       <HeroSection onEnquireClick={() => setIsLeadFormOpen(true)} />
 
-      {/* Desktop Fixed Lead Form */}
-      <div className="hidden lg:block fixed right-4 top-24 z-40 w-[420px]">
-        <LeadForm />
-      </div>
+
 
       <div id="overview">
         <Overview />

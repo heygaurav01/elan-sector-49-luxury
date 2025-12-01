@@ -28,11 +28,11 @@ const Footer = () => {
                 +91 8200 801 802
               </a>
               <a
-                href="mailto:info@elansector49.com"
+                href="mailto:contact@elaris.consulting"
                 className="flex items-center gap-2 text-sm opacity-90 hover:opacity-100 hover:text-primary transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                info@elansector49.com
+                contact@elaris.consulting
               </a>
               <div className="flex items-start gap-2 text-sm opacity-90">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
