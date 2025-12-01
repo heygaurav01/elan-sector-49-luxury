@@ -23,9 +23,7 @@ const Index = () => {
 
       {/* Desktop Fixed Lead Form */}
       <div className="hidden lg:block fixed right-4 top-24 z-40 w-[420px]">
-        <div className="sticky top-24">
-          <LeadForm />
-        </div>
+        <LeadForm />
       </div>
 
       <div id="overview">
