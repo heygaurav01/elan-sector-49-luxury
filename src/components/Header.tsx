@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import elanLogo from "@/assets/elan-logo.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,10 +22,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-2">
-          <div className="text-2xl font-bold">
-            <span className="text-primary">ELAN</span>
-            <span className="text-foreground"> Sector 49</span>
-          </div>
+          <img src={elanLogo} alt="ELAN Logo" className="h-12 w-auto" />
         </div>
 
         <div className="flex items-center gap-3">
