@@ -19,6 +19,7 @@ export default defineConfig(({ mode }) => ({
       input: {
         main: path.resolve(__dirname, 'index.html'),
         thankYou: path.resolve(__dirname, 'thank-you.html'),
+        disclaimer: path.resolve(__dirname, 'Disclaimer.html'),
       },
     },
   },

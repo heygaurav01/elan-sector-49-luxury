@@ -13,7 +13,7 @@ const Footer = () => {
               Experience ultra-luxury living in the heart of Gurgaon. Premium 4 BHK apartments designed for those who appreciate the finer things in life.
             </p>
             <p className="text-xs opacity-75">
-              RERA Regd No: GGM/128/2017/IR/177/EXT1/2022/8
+              PROJECT RERA  No: APPLIED
             </p>
           </div>
 
@@ -65,6 +65,11 @@ const Footer = () => {
 
         <div className="border-t border-secondary-foreground/20 pt-8 text-center text-sm opacity-75">
           <p>&copy; {new Date().getFullYear()} Elan Sector 49. All rights reserved.</p>
+          <p className="text-xs text-gray-200 mt-2">
+            <a href="/Disclaimer.html" className="hover:underline hover:text-gray-500 transition-colors">
+              Disclaimer & Privacy Policy
+            </a>
+          </p>
           <p className="mt-2 text-xs">
             Disclaimer: The content is for information purposes only and does not constitute an offer to avail of any service. Prices mentioned are subject to change without notice.
           </p>
