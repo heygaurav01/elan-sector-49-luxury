@@ -10,7 +10,7 @@ import Gallery from "@/components/Gallery";
 import FloorPlans from "@/components/FloorPlans";
 import Location from "@/components/Location";
 import Footer from "@/components/Footer";
-import MobileLeadButton from "@/components/MobileLeadButton";
+import MobileBottomNav from "@/components/MobileBottomNav";
 
 const Index = () => {
   const [isLeadFormOpen, setIsLeadFormOpen] = useState(false);
@@ -49,8 +49,8 @@ const Index = () => {
 
       <Footer />
 
-      {/* Mobile Lead Button */}
-      <MobileLeadButton />
+      {/* Mobile Bottom Navigation */}
+      <MobileBottomNav />
 
       {/* Enquire Now Dialog */}
       <Dialog open={isLeadFormOpen} onOpenChange={setIsLeadFormOpen}>

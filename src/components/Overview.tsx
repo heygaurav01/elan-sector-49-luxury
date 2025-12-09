@@ -30,7 +30,7 @@ const Overview = () => {
               >
                 <Icon className="w-8 h-8 text-primary mx-auto mb-3" />
                 <p className="text-sm text-muted-foreground mb-1">{spec.label}</p>
-                <p className={`font-bold ${spec.label === "RERA ID" ? "text-xs" : "text-lg"}`}>{spec.value}</p>
+                <p className={`font-bold ${spec.label === "RERA ID" ? "text-xs" : "text-lg"} break-words text-center px-2`}>{spec.value}</p>
               </div>
             );
           })}
