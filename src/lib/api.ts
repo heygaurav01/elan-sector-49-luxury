@@ -71,7 +71,7 @@ export const submitFormData = async (
             name: formData.name,
             phone: `${formData.countryCode}${formData.phone}`,
             email: formData.email,
-            promotion_code: "12UJ7BNBD_ms6g==",
+            promotion_code: "TzD5Y1wa_SumLA==",
             ip_address: userIP,
             ...(formData.message ? { message: formData.message } : {}),
             ...(utmParams.utmCampaign ? { utm_campaign: utmParams.utmCampaign } : {}),
@@ -79,7 +79,7 @@ export const submitFormData = async (
             ...(utmParams.utmMedium ? { utm_medium: utmParams.utmMedium } : {}),
         };
 
-        const response = await fetch("http://localhost:4000/api/request", {
+        const response = await fetch("https://api.elaris.ltd/api/request", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

@@ -6,14 +6,14 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4">
+            <h3 className="text-3xl font-bold mb-4">
               <span className="text-primary">ELAN</span> Sector 49
             </h3>
             <p className="text-sm opacity-90 mb-4">
               Experience ultra-luxury living in the heart of Gurgaon. Premium 4 BHK apartments designed for those who appreciate the finer things in life.
             </p>
             <p className="text-xs opacity-75">
-              PROJECT RERA  No: APPLIED
+              PROJECT RERA  No: APPLIED https://haryanarera.gov.in/
             </p>
           </div>
 

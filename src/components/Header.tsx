@@ -32,7 +32,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center">
-          <img src={elanLogo} alt="ELAN Logo" className="h-20 w-auto" />
+          <img src={elanLogo} alt="ELAN Logo" className="h-28 w-auto" />
         </div>
 
         {/* Desktop Navigation */}
