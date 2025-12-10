@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Phone, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import elanLogo from "@/assets/elan-logo.png";
+import elanLogo from "@/assets/elan-logo-new.png";
 import { trackPhoneCall, trackWhatsAppClick } from "@/lib/analytics";
 
 const Header = () => {
@@ -32,13 +32,13 @@ const Header = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/95 backdrop-blur-md shadow-md" : "bg-white shadow-sm"
         }`}
     >
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div className="container mx-auto px-4 py-2 flex items-center justify-between">
         <div className="flex items-center">
-          <img src={elanLogo} alt="ELAN Logo" className="h-20 lg:h-28 w-auto" />
+          <img src={elanLogo} alt="ELAN Logo" className="h-10 lg:h-12 w-auto object-contain" />
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-4">
           {navItems.map((item) => (
             <a
               key={item.name}

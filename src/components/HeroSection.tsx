@@ -45,7 +45,7 @@ const HeroSection = ({ onEnquireClick }: HeroSectionProps) => {
             Sector 49, Gurgaon
           </p>
           <p className="text-3xl md:text-4xl font-bold mb-8">
-            ₹10.50 Cr* Onwards
+            ₹10 Cr* Onwards
           </p>
           <Button
             onClick={onEnquireClick}
