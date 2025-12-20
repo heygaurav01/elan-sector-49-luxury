@@ -12,7 +12,7 @@ const MobileBottomNav = () => {
                     onClick={trackPhoneCall}
                     asChild
                 >
-                    <a href="tel:+918200801802">
+                    <a href="tel:+919111193575">
                         <Phone className="h-5 w-5" />
                         <span className="text-xs font-medium">Call</span>
                     </a>
@@ -25,7 +25,7 @@ const MobileBottomNav = () => {
                     asChild
                 >
                     <a
-                        href="https://wa.me/918200801802"
+                        href="https://wa.me/919111193575"
                         target="_blank"
                         rel="noopener noreferrer"
                     >

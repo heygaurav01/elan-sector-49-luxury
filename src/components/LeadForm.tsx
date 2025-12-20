@@ -6,7 +6,13 @@ import { useToast } from "@/hooks/use-toast";
 import { submitFormData } from "@/lib/api";
 import { trackContactForm } from "@/lib/analytics";
 
-const LeadForm = () => {
+interface LeadFormProps {
+  onSuccess?: () => void;
+  title?: string;
+  compact?: boolean;
+}
+
+const LeadForm = ({ onSuccess, title = "Register for Exclusive Offers", compact = false }: LeadFormProps = {}) => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -44,8 +50,16 @@ const LeadForm = () => {
 
     if (result.success) {
       trackContactForm("contact");
-      // Redirect to thank-you page
-      window.location.href = "/thank-you.html";
+      if (onSuccess) {
+        onSuccess();
+        toast({
+          title: "Registration Successful",
+          description: "Thank you for your interest!",
+        });
+      } else {
+        // Redirect to thank-you page
+        window.location.href = "/thank-you.html";
+      }
     } else {
       toast({
         title: "Submission Failed",
@@ -56,17 +70,17 @@ const LeadForm = () => {
   };
 
   return (
-    <div className="bg-white rounded-lg p-8 h-full flex flex-col justify-center">
-      <h3 className="text-2xl font-bold mb-2 text-foreground">
-        Register for Exclusive Offers
+    <div className={`bg-white rounded-lg h-full flex flex-col justify-center ${compact ? 'p-5' : 'p-8'}`}>
+      <h3 className={`font-bold text-foreground ${compact ? 'text-xl mb-3' : 'text-2xl mb-2'}`}>
+        {title}
       </h3>
-      <p className="text-sm text-muted-foreground mb-6">
+      <p className={`text-sm text-muted-foreground ${compact ? 'mb-4' : 'mb-6'}`}>
         Get best deals and latest updates
       </p>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className={compact ? "space-y-3" : "space-y-4"}>
         <div>
-          <Label htmlFor="name">Name *</Label>
+          <Label htmlFor="name" className={compact ? "text-xs" : ""}>Name *</Label>
           <Input
             id="name"
             type="text"
@@ -76,11 +90,12 @@ const LeadForm = () => {
               setFormData({ ...formData, name: e.target.value })
             }
             required
+            className={compact ? "h-9" : ""}
           />
         </div>
 
         <div>
-          <Label htmlFor="phone">Phone Number *</Label>
+          <Label htmlFor="phone" className={compact ? "text-xs" : ""}>Phone Number *</Label>
           <Input
             id="phone"
             type="tel"
@@ -90,11 +105,12 @@ const LeadForm = () => {
               setFormData({ ...formData, phone: e.target.value.replace(/\D/g, "").slice(0, 10) })
             }
             required
+            className={compact ? "h-9" : ""}
           />
         </div>
 
         <div>
-          <Label htmlFor="email">Email (Optional)</Label>
+          <Label htmlFor="email" className={compact ? "text-xs" : ""}>Email (Optional)</Label>
           <Input
             id="email"
             type="email"
@@ -103,10 +119,11 @@ const LeadForm = () => {
             onChange={(e) =>
               setFormData({ ...formData, email: e.target.value })
             }
+            className={compact ? "h-9" : ""}
           />
         </div>
 
-        <Button type="submit" className="w-full bg-primary hover:bg-primary/90">
+        <Button type="submit" className={`w-full bg-primary hover:bg-primary/90 ${compact ? 'h-9 text-sm' : ''}`}>
           Register Now
         </Button>
       </form>

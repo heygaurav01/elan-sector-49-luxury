@@ -56,9 +56,9 @@ const Header = () => {
             className="bg-black text-white hover:bg-gray-800 flex items-center justify-center gap-2 h-8 w-8 p-0 lg:h-auto lg:w-auto lg:px-4 lg:py-2"
             onClick={trackPhoneCall}
           >
-            <a href="tel:+918200801802">
+            <a href="tel:+919111193575">
               <Phone className="h-4 w-4" />
-              <span className="hidden lg:inline font-semibold">+91 8200 801 802</span>
+              <span className="hidden lg:inline font-semibold">+91 9111193575</span>
             </a>
           </Button>
 
@@ -69,7 +69,7 @@ const Header = () => {
             onClick={trackWhatsAppClick}
           >
             <a
-              href="https://wa.me/918200801802"
+              href="https://wa.me/919111193575"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2"

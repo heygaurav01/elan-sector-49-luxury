@@ -39,7 +39,7 @@ const HeroSection = ({ onEnquireClick }: HeroSectionProps) => {
       <div className="relative z-10 container mx-auto px-4 h-full flex items-center justify-between">
         <div className="max-w-2xl text-white">
           <h1 className="text-5xl md:text-7xl font-bold mb-4 animate-fade-in">
-            4 BHK Luxury Apartments
+            3/4 BHK Luxury Apartments
           </h1>
           <p className="text-2xl md:text-3xl mb-2 text-primary font-semibold">
             Sector 49, Gurgaon
@@ -47,13 +47,22 @@ const HeroSection = ({ onEnquireClick }: HeroSectionProps) => {
           <p className="text-3xl md:text-4xl font-bold mb-8">
             ₹10 Cr* Onwards
           </p>
-          <Button
-            onClick={onEnquireClick}
-            size="lg"
-            className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg font-semibold"
-          >
-            Enquire Now
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button
+              onClick={onEnquireClick}
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg font-semibold"
+            >
+              Enquire Now
+            </Button>
+            <Button
+              onClick={onEnquireClick}
+              size="lg"
+              className="bg-white hover:bg-white/90 text-black px-8 py-6 text-lg font-semibold"
+            >
+              Book Now at ₹15 Lacs
+            </Button>
+          </div>
         </div>
 
         <div className="hidden lg:block w-[450px] bg-white rounded-lg shadow-2xl">

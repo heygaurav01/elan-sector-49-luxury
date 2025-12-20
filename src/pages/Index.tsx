@@ -8,6 +8,7 @@ import Highlights from "@/components/Highlights";
 import Amenities from "@/components/Amenities";
 import Gallery from "@/components/Gallery";
 import FloorPlans from "@/components/FloorPlans";
+import VirtualTour from "@/components/VirtualTour";
 import Location from "@/components/Location";
 import Footer from "@/components/Footer";
 import MobileBottomNav from "@/components/MobileBottomNav";
@@ -42,6 +43,8 @@ const Index = () => {
       <div id="floor-plans">
         <FloorPlans />
       </div>
+
+      <VirtualTour />
 
       <div id="location">
         <Location />

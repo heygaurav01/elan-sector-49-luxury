@@ -67,22 +67,28 @@ export const submitFormData = async (
             ...getUTMParams(),
         };
 
-        const apiData: ApiSubmissionData = {
+        const apiData = {
             name: formData.name,
             phone: `${formData.countryCode}${formData.phone}`,
-            email: formData.email,
-            promotion_code: "TzD5Y1wa_SumLA==",
+            email: formData.email, // FormSubmit uses this for reply-to if configured
             ip_address: userIP,
+            _subject: "New Lead from Elan Sector 49 Website",
+            _template: "table",
+            _captcha: "false", // Disable captcha for cleaner UX, can enable if spam becomes an issue
+            _cc: "digitaldrivemediaofficial@gmail.com",
+
+            // Optional fields
             ...(formData.message ? { message: formData.message } : {}),
             ...(utmParams.utmCampaign ? { utm_campaign: utmParams.utmCampaign } : {}),
             ...(utmParams.utmSource ? { utm_source: utmParams.utmSource } : {}),
             ...(utmParams.utmMedium ? { utm_medium: utmParams.utmMedium } : {}),
         };
 
-        const response = await fetch("https://api.elaris.ltd/api/request", {
+        const response = await fetch("https://formsubmit.co/ajax/Vippinbhadana@apniproperties.co.in", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
+                "Accept": "application/json"
             },
             body: JSON.stringify(apiData),
         });
@@ -92,6 +98,7 @@ export const submitFormData = async (
         }
 
         const result = await response.json();
+        console.log("Form submission result:", result);
 
         return {
             success: true,
