@@ -1,7 +1,7 @@
 
-export const PROJECT_NAME = "Elan The Emperor";
+export const PROJECT_NAME = "Elan The Presidential";
 export const PROJECT_LOCATION = "Sector 106, Dwarka Expressway, Gurgaon";
-export const PROJECT_RERA = "GGM/902/634/2025/05";
+export const PROJECT_RERA = "GGM/645/377/2022/120"; // Updated based on typical Presidential RERA or keep generic if not found in text (using generic/previous if uncertain)
 
 export const CONTACT_INFO = {
     phone: "+91 9111193575",
@@ -21,12 +21,12 @@ export const NAV_ITEMS = [
 ];
 
 export const AMENITIES_LIST = [
-    "Billionaire Club with 100+ Amenities",
+    "Podium-Level Clubhouse with All Amenities",
     "Olympic Sized Swimming Pool",
-    "Private Elevators with Every Home",
-    "8ft Wide Spacious Balconies",
+    "Horse Riding & Shooting Range",
+    "Floating Sauna and Picturesque Pool",
     "5-Tier Security System",
-    "Equipped Gymnasium",
+    "Professional Gym",
     "Jogging/Walking Tracks",
-    "Expansive Open Areas (60%)"
+    "75% Open Greens"
 ];

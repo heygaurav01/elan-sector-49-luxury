@@ -38,8 +38,17 @@ const FloorPlans = () => {
               <tbody>
                 <tr className="border-b hover:bg-muted/50">
                   <td className="p-4 font-semibold">Apartments</td>
-                  <td className="p-4">4 BHK + SQ</td>
-                  <td className="p-4">4223 / 4640</td>
+                  <td className="p-4">3 BHK</td>
+                  <td className="p-4">2500 Onwards</td>
+                  <td className="p-4 font-bold text-primary">₹ 5.0 Cr*</td>
+                  <td className="p-4">
+                    <Button size="sm" onClick={() => handleDownloadClick("floor")}>View Layout</Button>
+                  </td>
+                </tr>
+                <tr className="border-b hover:bg-muted/50">
+                  <td className="p-4 font-semibold">Apartments</td>
+                  <td className="p-4">4 BHK</td>
+                  <td className="p-4">3000 Onwards</td>
                   <td className="p-4 font-bold text-primary">On Request</td>
                   <td className="p-4">
                     <Button size="sm" onClick={() => handleDownloadClick("floor")}>View Layout</Button>
@@ -47,17 +56,8 @@ const FloorPlans = () => {
                 </tr>
                 <tr className="border-b hover:bg-muted/50">
                   <td className="p-4 font-semibold">Apartments</td>
-                  <td className="p-4">5 BHK + SQ</td>
-                  <td className="p-4">5434 / 5891</td>
-                  <td className="p-4 font-bold text-primary">On Request</td>
-                  <td className="p-4">
-                    <Button size="sm" onClick={() => handleDownloadClick("floor")}>View Layout</Button>
-                  </td>
-                </tr>
-                <tr className="border-b hover:bg-muted/50">
-                  <td className="p-4 font-semibold">Penthouses</td>
-                  <td className="p-4">4 BHK + SQ</td>
-                  <td className="p-4">7225 / 8053</td>
+                  <td className="p-4">5 BHK</td>
+                  <td className="p-4">4000 Onwards</td>
                   <td className="p-4 font-bold text-primary">On Request</td>
                   <td className="p-4">
                     <Button size="sm" onClick={() => handleDownloadClick("floor")}>View Layout</Button>
@@ -66,7 +66,7 @@ const FloorPlans = () => {
                 <tr className="border-b hover:bg-muted/50">
                   <td className="p-4 font-semibold">Penthouses</td>
                   <td className="p-4">5 BHK + SQ</td>
-                  <td className="p-4">9570 / 10347</td>
+                  <td className="p-4">6500</td>
                   <td className="p-4 font-bold text-primary">On Request</td>
                   <td className="p-4">
                     <Button size="sm" onClick={() => handleDownloadClick("floor")}>View Layout</Button>

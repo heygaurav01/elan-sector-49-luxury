@@ -1,15 +1,16 @@
-import { MapPin, Maximize2, Building2, Layers, Home, CheckCircle } from "lucide-react";
+import { MapPin, Maximize2, Building2, Layers, Home, CheckCircle, User, HardHat } from "lucide-react";
 
 const Overview = () => {
   const specs = [
     { icon: MapPin, label: "Location", value: "Sector 106, Dwarka Expressway" },
-    { icon: Maximize2, label: "Land Area", value: "12 Acres" }, // Approximation based on typical luxury projects, can adjust if strict data needed
-    { icon: Building2, label: "No. of Units", value: "Limited Edition" },
-    { icon: Layers, label: "Types", value: "Super Luxury Residences" },
-    { icon: Layers, label: "Floors", value: "High Rise" }, // Generic if not specific
-    { icon: Home, label: "Unit Variants", value: "4 & 5 BHK + SQ & Penthouses" },
+    { icon: Maximize2, label: "Land Area", value: "40 Acres" },
+    { icon: Building2, label: "Developer", value: "Elan Limited" },
+    { icon: Layers, label: "Type", value: "Apartments/Penthouses" },
+    { icon: Layers, label: "Open Area", value: "75% Open Greens" },
+    { icon: Home, label: "Area", value: "2500 - 6500 SQFT" },
+    { icon: User, label: "Architect", value: "UHA London" },
+    { icon: HardHat, label: "Construction", value: "Leighton" },
     { icon: CheckCircle, label: "Status", value: "New Launch" },
-    { icon: CheckCircle, label: "RERA ID", value: "GGM/902/634/2025/05" },
   ];
 
   return (

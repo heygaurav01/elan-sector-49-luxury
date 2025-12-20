@@ -3,28 +3,28 @@ import { CheckCircle } from "lucide-react";
 const Highlights = () => {
   const highlights = [
     {
-      title: "Residences",
-      description: "These residences offer a perfect blend of grandeur, exclusivity and modern sophistication. 3-Side open apartments with running balconies.",
+      title: "Expansive Greenery",
+      description: "Spread in 40 Acres, 75% Open Greens with every apartment facing central greens.",
     },
     {
-      title: "The Billionaire Club",
-      description: "Watch simple moments transform into extraordinary experiences at the Clubhouse. Luxury 8 level club with 100+ amenities.",
+      title: "Opulent Design",
+      description: "Contemporary and opulent design features with an Air-conditioned Triple height lobby.",
     },
     {
-      title: "Amenities",
-      description: "Watch luxury get a new definition through never seen before amenities, exclusive spaces, ideas and imaginations. Olympic sized swimming pool.",
+      title: "Podium Clubhouse",
+      description: "Podium-Level Clubhouse with all amenities, including a Floating sauna and picturesque pool.",
     },
     {
-      title: "Magnificent Arrival",
-      description: "Step into timeless elegance as the grand entrance, surrounded by breathtaking greenery, sets the stage for opulent living.",
+      title: "Premium Interiors",
+      description: "VRV/VRF ACs in bedrooms, living & dining area. Modular Kitchen with sealed piping.",
     },
     {
-      title: "Pristine Natural Elements",
-      description: "Watch pristine natural elements surround you as beautifully landscaped green spaces invite you to unwind and reconnect.",
+      title: "Convenience",
+      description: "3-level basement parking and seamless connectivity from Delhi. A short drive from IGI Airport.",
     },
     {
-      title: "Recreation & Wellness",
-      description: "Features expansive open spaces, tailored for kids and senior citizens alike. Private elevators with every home.",
+      title: "Recreation",
+      description: "Features Horse Riding & Shooting range, Tennis & Badminton Court, and Dedicated Kids Zone.",
     },
   ];
 

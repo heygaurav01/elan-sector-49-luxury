@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid lg:grid-cols-12 gap-8 mb-8">
           <div className="lg:col-span-4">
             <h3 className="text-3xl font-bold mb-4">
-              <span className="text-primary">ELAN</span> The Emperor
+              <span className="text-primary">ELAN</span> The Presidential
             </h3>
             <p className="text-sm opacity-90 mb-4">
               Experience the grandeur of {PROJECT_NAME}. Super Luxury Residences in {PROJECT_LOCATION}. Designed for those who appreciate the finer things in life.

@@ -1,17 +1,20 @@
-import { Dumbbell, Waves, Theater, Trees, Sparkles, Gamepad2, Shield, Car } from "lucide-react";
+import { Building2, Waves, Sparkles, Trees, Shield, Dumbbell, Gamepad2, Theater, Car, Utensils, Users, Trophy, Star } from "lucide-react";
 
 const Amenities = () => {
   const amenities = [
-    { icon: Building2, name: "Billionaire Club", image: "club" },
+    { icon: Building2, name: "Luxury Club House", image: "club" },
     { icon: Waves, name: "Olympic Sized Pool", image: "pool" },
-    { icon: Sparkles, name: "Private Elevators", image: "elevator" },
-    { icon: Trees, name: "8ft Wide Balcony", image: "balcony" },
+    { icon: Sparkles, name: "Floating Sauna", image: "sauna" },
+    { icon: Trees, name: "Horse Riding", image: "riding" },
     { icon: Shield, name: "5-Tier Security", image: "security" },
-    { icon: Dumbbell, name: "Equipped Gym", image: "gym" },
-    { icon: Trees, name: "Jogging Tracks", image: "jogging" },
-    { icon: Sparkles, name: "60% Open Area", image: "openarea" },
-    { icon: Gamepad2, name: "Sports & Wellness", image: "wellness" },
-    { icon: Car, name: "Ample Parking", image: "parking" },
+    { icon: Dumbbell, name: "Professional Gym", image: "gym" },
+    { icon: Trees, name: "Landscaped Central Greens", image: "greens" },
+    { icon: Gamepad2, name: "Shooting Range", image: "shooting" },
+    { icon: Theater, name: "Home Automation", image: "automation" },
+    { icon: Utensils, name: "Multi Cuisine Restaurant", image: "restaurant" },
+    { icon: Users, name: "Concierge / Help Desk", image: "concierge" },
+    { icon: Trophy, name: "Tennis & Badminton", image: "sports" },
+    { icon: Star, name: "8ft Wide Deck/Balcony", image: "balcony" }, // Correcting based on logical 8ft
   ];
 
   return (
@@ -44,7 +47,6 @@ const Amenities = () => {
   );
 };
 
-// Add missing import
-import { Building2 } from "lucide-react";
+
 
 export default Amenities;

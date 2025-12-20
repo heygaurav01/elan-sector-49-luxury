@@ -48,18 +48,18 @@ const HeroSection = ({ onEnquireClick }: HeroSectionProps) => {
 
           <div className="flex flex-col md:flex-row gap-6 md:gap-12 mb-8 items-start md:items-center">
             <div className="flex items-baseline gap-2">
-              <span className="text-5xl md:text-6xl font-bold text-white">4/5</span>
+              <span className="text-5xl md:text-6xl font-bold text-white">3/4/5</span>
               <span className="text-2xl md:text-3xl font-bold text-primary">BHK</span>
             </div>
             <div className="flex items-baseline gap-2">
               <span className="text-3xl md:text-4xl font-bold text-primary">₹</span>
-              <span className="text-5xl md:text-6xl font-bold text-white">12.5</span>
+              <span className="text-5xl md:text-6xl font-bold text-white">5.0</span>
               <span className="text-2xl md:text-3xl font-bold text-primary">Cr*</span>
             </div>
           </div>
 
           <p className="text-xl opacity-90 mb-8 max-w-xl">
-            Global Triumph in Architectural Innovation & Design
+            Reimagine luxury living with expansive balconies and personalized concierge service.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button

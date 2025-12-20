@@ -10,13 +10,13 @@ const Location = () => {
 
   const landmarks = [
     { name: "IGI Airport", time: "15 Mins" },
+    { name: "NH-8", time: "Connected" },
     { name: "Dwarka Expressway", time: "0 Mins" },
-    { name: "NH-8 (Delhi-Jaipur Highway)", time: "Connected" },
-    { name: "Delhi Border", time: "05 Mins" },
-    { name: "Cyber City", time: "25 Mins" },
     { name: "Diplomatic Enclave", time: "Nearby" },
-    { name: "Yashobhoomi (Convention Centre)", time: "15 Mins" },
-    { name: "Upcoming Global City", time: "Nearby" },
+    { name: "Cyber City", time: "30 Mins" },
+    { name: "Delhi Border", time: "05 Mins" },
+    { name: "Vasant Vihar", time: "30 Mins" },
+    { name: "Aerocity", time: "20 Mins" },
   ];
 
   const handleSuccess = () => {
