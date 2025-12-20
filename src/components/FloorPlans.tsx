@@ -23,6 +23,60 @@ const FloorPlans = () => {
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
         </div>
 
+        <div className="max-w-5xl mx-auto mb-16">
+          <div className="overflow-x-auto bg-card rounded-lg shadow-lg">
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="bg-primary text-primary-foreground">
+                  <th className="p-4 border-b">Type</th>
+                  <th className="p-4 border-b">Configuration</th>
+                  <th className="p-4 border-b">Size (SQ.FT.)</th>
+                  <th className="p-4 border-b">Price</th>
+                  <th className="p-4 border-b">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b hover:bg-muted/50">
+                  <td className="p-4 font-semibold">Apartments</td>
+                  <td className="p-4">4 BHK + SQ</td>
+                  <td className="p-4">4223 / 4640</td>
+                  <td className="p-4 font-bold text-primary">On Request</td>
+                  <td className="p-4">
+                    <Button size="sm" onClick={() => handleDownloadClick("floor")}>View Layout</Button>
+                  </td>
+                </tr>
+                <tr className="border-b hover:bg-muted/50">
+                  <td className="p-4 font-semibold">Apartments</td>
+                  <td className="p-4">5 BHK + SQ</td>
+                  <td className="p-4">5434 / 5891</td>
+                  <td className="p-4 font-bold text-primary">On Request</td>
+                  <td className="p-4">
+                    <Button size="sm" onClick={() => handleDownloadClick("floor")}>View Layout</Button>
+                  </td>
+                </tr>
+                <tr className="border-b hover:bg-muted/50">
+                  <td className="p-4 font-semibold">Penthouses</td>
+                  <td className="p-4">4 BHK + SQ</td>
+                  <td className="p-4">7225 / 8053</td>
+                  <td className="p-4 font-bold text-primary">On Request</td>
+                  <td className="p-4">
+                    <Button size="sm" onClick={() => handleDownloadClick("floor")}>View Layout</Button>
+                  </td>
+                </tr>
+                <tr className="border-b hover:bg-muted/50">
+                  <td className="p-4 font-semibold">Penthouses</td>
+                  <td className="p-4">5 BHK + SQ</td>
+                  <td className="p-4">9570 / 10347</td>
+                  <td className="p-4 font-bold text-primary">On Request</td>
+                  <td className="p-4">
+                    <Button size="sm" onClick={() => handleDownloadClick("floor")}>View Layout</Button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <div className="bg-card rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
             <img
@@ -37,7 +91,7 @@ const FloorPlans = () => {
                 className="w-full bg-primary hover:bg-primary/90"
               >
                 <Download className="w-4 h-4 mr-2" />
-                Download Floor Plan
+                Download Floor Plans
               </Button>
             </div>
           </div>
@@ -85,8 +139,8 @@ const FloorPlans = () => {
                 {dialogType === "floor"
                   ? "Download Floor Plan"
                   : dialogType === "master"
-                  ? "Download Master Plan"
-                  : "Download Price Sheet"}
+                    ? "Download Master Plan"
+                    : "Download Price Sheet"}
               </DialogTitle>
             </DialogHeader>
             <div className="mt-4">

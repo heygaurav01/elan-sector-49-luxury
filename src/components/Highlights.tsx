@@ -3,28 +3,28 @@ import { CheckCircle } from "lucide-react";
 const Highlights = () => {
   const highlights = [
     {
-      title: "Ultra-Luxury Residences",
-      description: "The project offers a limited collection of spacious 4 BHK Apartments, with sizes 4500 Sq. Ft.",
+      title: "Residences",
+      description: "These residences offer a perfect blend of grandeur, exclusivity and modern sophistication. 3-Side open apartments with running balconies.",
     },
     {
-      title: "Low-Density Living",
-      description: "Spread across approximately 6 acres, the development is low-density, with 340 units and generally two apartments per core (floor) in high-rise towers (G+36 floors), ensuring maximum privacy and exclusivity.",
+      title: "The Billionaire Club",
+      description: "Watch simple moments transform into extraordinary experiences at the Clubhouse. Luxury 8 level club with 100+ amenities.",
     },
     {
-      title: "Expansive Clubhouse",
-      description: "A massive, resort-style clubhouse, ranging from 70,000 to over 150,000 Sq. Ft., is a focal point, featuring extensive amenities like a gym, spa, swimming pools (including an Olympic-style indoor pool), and various sports courts.",
+      title: "Amenities",
+      description: "Watch luxury get a new definition through never seen before amenities, exclusive spaces, ideas and imaginations. Olympic sized swimming pool.",
     },
     {
-      title: "Premium Interiors & Finishes",
-      description: "Residences are crafted with high-end specifications including imported Italian marble flooring, double-glazed soundproof windows, energy-efficient VRV/VRF air conditioning, and European-style modular kitchens.",
+      title: "Magnificent Arrival",
+      description: "Step into timeless elegance as the grand entrance, surrounded by breathtaking greenery, sets the stage for opulent living.",
     },
     {
-      title: "Strategic Location",
-      description: "Situated on Sohna Road, the project offers excellent connectivity to the Golf Course Extension Road, NH-48, Southern Peripheral Road (SPR), and is a short drive from major business hubs like Cyber City and top-tier schools and hospitals.",
+      title: "Pristine Natural Elements",
+      description: "Watch pristine natural elements surround you as beautifully landscaped green spaces invite you to unwind and reconnect.",
     },
     {
-      title: "Green & Sustainable",
-      description: "The development incorporates sustainable practices with around 65% open green spaces, landscaped gardens, rainwater harvesting systems, and solar-powered common areas.",
+      title: "Recreation & Wellness",
+      description: "Features expansive open spaces, tailored for kids and senior citizens alike. Private elevators with every home.",
     },
   ];
 

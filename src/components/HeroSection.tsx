@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import hero1 from "@/assets/hero-1.png";
 import hero2 from "@/assets/hero-2.png";
 import LeadForm from "@/components/LeadForm";
+import { PROJECT_NAME, PROJECT_LOCATION } from "@/lib/constants";
 
 interface HeroSectionProps {
   onEnquireClick: () => void;
@@ -29,7 +30,7 @@ const HeroSection = ({ onEnquireClick }: HeroSectionProps) => {
         >
           <img
             src={img}
-            alt={`Elan Sector 49 - View ${index + 1}`}
+            alt={`${PROJECT_NAME} - View ${index + 1}`}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
@@ -39,13 +40,26 @@ const HeroSection = ({ onEnquireClick }: HeroSectionProps) => {
       <div className="relative z-10 container mx-auto px-4 h-full flex items-center justify-between">
         <div className="max-w-2xl text-white">
           <h1 className="text-5xl md:text-7xl font-bold mb-4 animate-fade-in">
-            3/4 BHK Luxury Apartments
+            Super Luxury Residences
           </h1>
-          <p className="text-2xl md:text-3xl mb-2 text-primary font-semibold">
-            Sector 49, Gurgaon
+          <p className="text-2xl md:text-3xl mb-4 text-primary font-semibold">
+            {PROJECT_LOCATION}
           </p>
-          <p className="text-3xl md:text-4xl font-bold mb-8">
-            ₹10 Cr* Onwards
+
+          <div className="flex flex-col md:flex-row gap-6 md:gap-12 mb-8 items-start md:items-center">
+            <div className="flex items-baseline gap-2">
+              <span className="text-5xl md:text-6xl font-bold text-white">4/5</span>
+              <span className="text-2xl md:text-3xl font-bold text-primary">BHK</span>
+            </div>
+            <div className="flex items-baseline gap-2">
+              <span className="text-3xl md:text-4xl font-bold text-primary">₹</span>
+              <span className="text-5xl md:text-6xl font-bold text-white">12.5</span>
+              <span className="text-2xl md:text-3xl font-bold text-primary">Cr*</span>
+            </div>
+          </div>
+
+          <p className="text-xl opacity-90 mb-8 max-w-xl">
+            Global Triumph in Architectural Innovation & Design
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
@@ -60,7 +74,7 @@ const HeroSection = ({ onEnquireClick }: HeroSectionProps) => {
               size="lg"
               className="bg-white hover:bg-white/90 text-black px-8 py-6 text-lg font-semibold"
             >
-              Book Now at ₹15 Lacs
+              Download Brochure
             </Button>
           </div>
         </div>

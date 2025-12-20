@@ -2,15 +2,15 @@ import { Dumbbell, Waves, Theater, Trees, Sparkles, Gamepad2, Shield, Car } from
 
 const Amenities = () => {
   const amenities = [
-    { icon: Building2, name: "Double Height Lobby", image: "lobby" },
-    { icon: Sparkles, name: "Grandeur", image: "grandeur" },
-    { icon: Waves, name: "Swimming Pool", image: "pool" },
-    { icon: Theater, name: "Theater", image: "theater" },
-    { icon: Trees, name: "Joggers Park", image: "joggers" },
-    { icon: Dumbbell, name: "Gymnasium", image: "gym" },
-    { icon: Sparkles, name: "SPA", image: "spa" },
-    { icon: Gamepad2, name: "Games Room", image: "games" },
-    { icon: Shield, name: "24/7 Security", image: "security" },
+    { icon: Building2, name: "Billionaire Club", image: "club" },
+    { icon: Waves, name: "Olympic Sized Pool", image: "pool" },
+    { icon: Sparkles, name: "Private Elevators", image: "elevator" },
+    { icon: Trees, name: "8ft Wide Balcony", image: "balcony" },
+    { icon: Shield, name: "5-Tier Security", image: "security" },
+    { icon: Dumbbell, name: "Equipped Gym", image: "gym" },
+    { icon: Trees, name: "Jogging Tracks", image: "jogging" },
+    { icon: Sparkles, name: "60% Open Area", image: "openarea" },
+    { icon: Gamepad2, name: "Sports & Wellness", image: "wellness" },
     { icon: Car, name: "Ample Parking", image: "parking" },
   ];
 

@@ -9,14 +9,14 @@ const Location = () => {
   const [showDialog, setShowDialog] = useState(false);
 
   const landmarks = [
-    { name: "Sohna Road", time: "02 Mins" },
-    { name: "Golf Course Extension Road", time: "05 Mins" },
-    { name: "NH-48 (Delhi–Jaipur Highway)", time: "10 Mins" },
-    { name: "Huda City Centre Metro Station", time: "15 Mins" },
-    { name: "Cyber City / Udyog Vihar", time: "25 Mins" },
-    { name: "Medanta – The Medicity Hospital", time: "10 Mins" },
-    { name: "IGI Airport", time: "25 Mins" },
-    { name: "Aravalli Biodiversity Park / Nature Trails", time: "15 Mins" },
+    { name: "IGI Airport", time: "15 Mins" },
+    { name: "Dwarka Expressway", time: "0 Mins" },
+    { name: "NH-8 (Delhi-Jaipur Highway)", time: "Connected" },
+    { name: "Delhi Border", time: "05 Mins" },
+    { name: "Cyber City", time: "25 Mins" },
+    { name: "Diplomatic Enclave", time: "Nearby" },
+    { name: "Yashobhoomi (Convention Centre)", time: "15 Mins" },
+    { name: "Upcoming Global City", time: "Nearby" },
   ];
 
   const handleSuccess = () => {
@@ -31,7 +31,7 @@ const Location = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Location Advantage</h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-muted-foreground text-lg">
-            Strategically located in Sector 49, Gurgaon with excellent connectivity
+            Strategically located in Sector 106, Dwarka Expressway, Gurgaon
           </p>
         </div>
 

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import elanLogo from "@/assets/elan-logo-new.png";
 import { trackPhoneCall, trackWhatsAppClick } from "@/lib/analytics";
+import { NAV_ITEMS, CONTACT_INFO } from "@/lib/constants";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,16 +18,6 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems = [
-    { name: "OVERVIEW", href: "#overview" },
-    { name: "HIGHLIGHTS", href: "#highlights" },
-    { name: "GALLERY", href: "#gallery" },
-    { name: "PRICE LIST", href: "#" },
-    { name: "FLOOR PLANS", href: "#floor-plans" },
-    { name: "LOCATION", href: "#location" },
-    { name: "AMENITIES", href: "#amenities" },
-  ];
-
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/95 backdrop-blur-md shadow-md" : "bg-white shadow-sm"
@@ -39,7 +30,7 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-4">
-          {navItems.map((item) => (
+          {NAV_ITEMS.map((item) => (
             <a
               key={item.name}
               href={item.href}
@@ -56,9 +47,9 @@ const Header = () => {
             className="bg-black text-white hover:bg-gray-800 flex items-center justify-center gap-2 h-8 w-8 p-0 lg:h-auto lg:w-auto lg:px-4 lg:py-2"
             onClick={trackPhoneCall}
           >
-            <a href="tel:+919111193575">
+            <a href={`tel:${CONTACT_INFO.phone}`}>
               <Phone className="h-4 w-4" />
-              <span className="hidden lg:inline font-semibold">+91 9111193575</span>
+              <span className="hidden lg:inline font-semibold">{CONTACT_INFO.phoneDisplay}</span>
             </a>
           </Button>
 
@@ -69,7 +60,7 @@ const Header = () => {
             onClick={trackWhatsAppClick}
           >
             <a
-              href="https://wa.me/919111193575"
+              href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2"
@@ -94,7 +85,7 @@ const Header = () => {
               <SheetTitle>Menu</SheetTitle>
             </SheetHeader>
             <nav className="flex flex-col gap-4 mt-8">
-              {navItems.map((item) => (
+              {NAV_ITEMS.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}

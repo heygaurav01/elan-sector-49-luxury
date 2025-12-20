@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin } from "lucide-react";
 import LeadForm from "./LeadForm";
+import { PROJECT_NAME, PROJECT_LOCATION, PROJECT_RERA, CONTACT_INFO } from "@/lib/constants";
 
 const Footer = () => {
   return (
@@ -8,13 +9,13 @@ const Footer = () => {
         <div className="grid lg:grid-cols-12 gap-8 mb-8">
           <div className="lg:col-span-4">
             <h3 className="text-3xl font-bold mb-4">
-              <span className="text-primary">ELAN</span> Sector 49
+              <span className="text-primary">ELAN</span> The Emperor
             </h3>
             <p className="text-sm opacity-90 mb-4">
-              Experience ultra-luxury living in the heart of Gurgaon. Premium 3/4 BHK apartments designed for those who appreciate the finer things in life.
+              Experience the grandeur of {PROJECT_NAME}. Super Luxury Residences in {PROJECT_LOCATION}. Designed for those who appreciate the finer things in life.
             </p>
             <p className="text-xs opacity-75">
-              PROJECT RERA  No: APPLIED https://haryanarera.gov.in/
+              RERA No: {PROJECT_RERA} | haryanarera.gov.in
             </p>
           </div>
 
@@ -22,16 +23,16 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
             <div className="space-y-3">
               <a
-                href="tel:+919111193575"
+                href={`tel:${CONTACT_INFO.phone}`}
                 className="flex items-center gap-2 text-sm opacity-90 hover:opacity-100 hover:text-primary transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                +91 9111193575
+                {CONTACT_INFO.phoneDisplay}
               </a>
 
               <div className="flex items-start gap-2 text-sm opacity-90">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                <span>Sector 49, Sohna Road, Gurgaon, Haryana</span>
+                <span>{PROJECT_LOCATION}</span>
               </div>
             </div>
           </div>
@@ -40,7 +41,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <div className="space-y-2">
               <a href="#overview" className="block text-sm opacity-90 hover:opacity-100 hover:text-primary transition-colors">
-                Project Overview
+                Overview
               </a>
               <a href="#highlights" className="block text-sm opacity-90 hover:opacity-100 hover:text-primary transition-colors">
                 Highlights
@@ -63,7 +64,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-secondary-foreground/20 pt-8 text-center text-sm opacity-75">
-          <p>&copy; {new Date().getFullYear()} Elan Sector 49. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} {PROJECT_NAME}. All rights reserved.</p>
           <p className="text-xs text-gray-200 mt-2">
             <a href="/Disclaimer.html" className="hover:underline hover:text-gray-500 transition-colors">
               Disclaimer & Privacy Policy
