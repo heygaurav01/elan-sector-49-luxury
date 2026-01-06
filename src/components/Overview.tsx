@@ -2,14 +2,14 @@ import { MapPin, Maximize2, Building2, Layers, Home, CheckCircle } from "lucide-
 
 const Overview = () => {
   const specs = [
-    { icon: MapPin, label: "Location", value: "Sector 49, Gurgaon" },
-    { icon: Maximize2, label: "Land Area", value: "6 Acres" },
-    { icon: Building2, label: "No. of Units", value: "340" },
-    { icon: Layers, label: "No. of Towers", value: "05" },
-    { icon: Layers, label: "No. of Floors", value: "G + 36" },
-    { icon: Home, label: "Unit Variants", value: "3/4 BHK" },
-    { icon: CheckCircle, label: "Status", value: "Coming Soon" },
-    { icon: CheckCircle, label: "RERA ID", value: "GGM/128/2017/IR/177/EXT1/2022/8" },
+    { icon: MapPin, label: "Location", value: "Sector 106, Dwarka Expressway" },
+    { icon: Maximize2, label: "Land Area", value: "40 Acres" },
+    { icon: Building2, label: "No. of Units", value: "360 Units Only" },
+    { icon: Layers, label: "Tower Height", value: "G + 40" },
+    { icon: Layers, label: "Lobby", value: "Triple Height (40ft)" },
+    { icon: Home, label: "Configuration", value: "4 BHK + Servant" },
+    { icon: Layers, label: "Podium", value: "4th Floor Level" },
+    { icon: CheckCircle, label: "RERA ID", value: "GGM/645/377/2022/120" },
   ];
 
   return (
