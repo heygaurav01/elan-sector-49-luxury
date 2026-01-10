@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import BlurGateway from "./BlurGateway";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
@@ -8,7 +7,7 @@ import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
 
 const Gallery = () => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
 
   const galleryImages = [
     { id: 1, src: gallery1, alt: "Luxury Pool Area with Palm Trees" },
@@ -33,30 +32,25 @@ const Gallery = () => {
           {galleryImages.map((image) => (
             <div
               key={image.id}
-              className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer aspect-[4/3] bg-muted"
-              onClick={() => setSelectedImage(image.src)}
+              className="group relative overflow-hidden rounded-lg shadow-lg aspect-[4/3] bg-muted"
             >
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                <p className="text-foreground p-4 font-semibold">{image.alt}</p>
+              <BlurGateway title="View Gallery">
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                />
+              </BlurGateway>
+              <div className="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                <p className="text-white font-semibold">{image.alt}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
-        <DialogContent className="max-w-4xl">
-          {selectedImage && (
-            <img src={selectedImage} alt="Gallery" className="w-full h-auto" />
-          )}
-        </DialogContent>
-      </Dialog>
+
     </section>
   );
 };

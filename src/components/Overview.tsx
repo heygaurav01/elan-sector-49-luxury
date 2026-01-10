@@ -9,7 +9,7 @@ const Overview = () => {
     { icon: Layers, label: "No. of Floors", value: "G + 36" },
     { icon: Home, label: "Unit Variants", value: "4 BHK" },
     { icon: CheckCircle, label: "Status", value: "Coming Soon" },
-    { icon: CheckCircle, label: "RERA ID", value: "GGM/128/2017/IR/177/EXT1/2022/8" },
+    { icon: CheckCircle, label: "RERA ID", value: "RC/HARERA/GGM/0/0/2023/117" },
   ];
 
   return (

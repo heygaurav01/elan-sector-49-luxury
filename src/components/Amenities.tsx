@@ -1,4 +1,5 @@
-import { Dumbbell, Waves, Theater, Trees, Sparkles, Gamepad2, Shield, Car } from "lucide-react";
+import { Dumbbell, Waves, Theater, Trees, Sparkles, Gamepad2, Shield, Car, Building2 } from "lucide-react";
+import BlurGateway from "./BlurGateway";
 
 const Amenities = () => {
   const amenities = [
@@ -25,26 +26,27 @@ const Amenities = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
-          {amenities.map((amenity, index) => {
-            const Icon = amenity.icon;
-            return (
-              <div
-                key={index}
-                className="bg-card p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-all hover:-translate-y-1"
-              >
-                <Icon className="w-12 h-12 text-primary mx-auto mb-3" />
-                <p className="font-semibold">{amenity.name}</p>
-              </div>
-            );
-          })}
+        <div className="relative group rounded-lg overflow-hidden">
+          <BlurGateway title="View Amenities">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+              {amenities.map((amenity, index) => {
+                const Icon = amenity.icon;
+                return (
+                  <div
+                    key={index}
+                    className="bg-card p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-all hover:-translate-y-1"
+                  >
+                    <Icon className="w-12 h-12 text-primary mx-auto mb-3" />
+                    <p className="font-semibold">{amenity.name}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </BlurGateway>
         </div>
       </div>
     </section>
   );
 };
-
-// Add missing import
-import { Building2 } from "lucide-react";
 
 export default Amenities;

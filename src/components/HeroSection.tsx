@@ -47,13 +47,22 @@ const HeroSection = ({ onEnquireClick }: HeroSectionProps) => {
           <p className="text-3xl md:text-4xl font-bold mb-8">
             ₹10 Cr* Onwards
           </p>
-          <Button
-            onClick={onEnquireClick}
-            size="lg"
-            className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg font-semibold"
-          >
-            Enquire Now
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button
+              onClick={onEnquireClick}
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg font-semibold"
+            >
+              Enquire Now
+            </Button>
+            <Button
+              onClick={onEnquireClick}
+              size="lg"
+              className="bg-white hover:bg-gray-100 text-primary px-8 py-6 text-lg font-semibold"
+            >
+              Book Now at ₹15 Lacs
+            </Button>
+          </div>
         </div>
 
         <div className="hidden lg:block w-[450px] bg-white rounded-lg shadow-2xl">

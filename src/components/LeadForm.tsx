@@ -6,7 +6,19 @@ import { useToast } from "@/hooks/use-toast";
 import { submitFormData } from "@/lib/api";
 import { trackContactForm } from "@/lib/analytics";
 
-const LeadForm = () => {
+interface LeadFormProps {
+  title?: string;
+  subtitle?: string;
+  className?: string;
+  hideHeader?: boolean;
+}
+
+const LeadForm = ({
+  title = "Register for Exclusive Offers",
+  subtitle = "Get best deals and latest updates",
+  className = "",
+  hideHeader = false
+}: LeadFormProps) => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -56,21 +68,28 @@ const LeadForm = () => {
   };
 
   return (
-    <div className="bg-white rounded-lg p-8 h-full flex flex-col justify-center">
-      <h3 className="text-2xl font-bold mb-2 text-foreground">
-        Register for Exclusive Offers
-      </h3>
-      <p className="text-sm text-muted-foreground mb-6">
-        Get best deals and latest updates
-      </p>
+    <div className={`bg-white rounded-lg p-8 h-full flex flex-col justify-center ${className}`}>
+      {!hideHeader && (
+        <>
+          <>
+            <h3 className="text-2xl font-bold mb-2 text-gray-900">
+              {title}
+            </h3>
+            <p className="text-sm text-gray-600 mb-6">
+              {subtitle}
+            </p>
+          </>
+        </>
+      )}
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <Label htmlFor="name">Name *</Label>
+          <Label htmlFor="name" className="text-gray-900">Name *</Label>
           <Input
             id="name"
             type="text"
             placeholder="Enter your name"
+            className="bg-white text-gray-900 border-gray-300 focus:border-primary placeholder:text-gray-500"
             value={formData.name}
             onChange={(e) =>
               setFormData({ ...formData, name: e.target.value })
@@ -80,11 +99,12 @@ const LeadForm = () => {
         </div>
 
         <div>
-          <Label htmlFor="phone">Phone Number *</Label>
+          <Label htmlFor="phone" className="text-gray-900">Phone Number *</Label>
           <Input
             id="phone"
             type="tel"
             placeholder="10-digit mobile number"
+            className="bg-white text-gray-900 border-gray-300 focus:border-primary placeholder:text-gray-500"
             value={formData.phone}
             onChange={(e) =>
               setFormData({ ...formData, phone: e.target.value.replace(/\D/g, "").slice(0, 10) })
@@ -94,11 +114,12 @@ const LeadForm = () => {
         </div>
 
         <div>
-          <Label htmlFor="email">Email (Optional)</Label>
+          <Label htmlFor="email" className="text-gray-900">Email (Optional)</Label>
           <Input
             id="email"
             type="email"
             placeholder="your@email.com"
+            className="bg-white text-gray-900 border-gray-300 focus:border-primary placeholder:text-gray-500"
             value={formData.email}
             onChange={(e) =>
               setFormData({ ...formData, email: e.target.value })

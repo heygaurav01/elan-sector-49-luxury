@@ -10,6 +10,8 @@ import Gallery from "@/components/Gallery";
 import FloorPlans from "@/components/FloorPlans";
 import Location from "@/components/Location";
 import Footer from "@/components/Footer";
+import VirtualSiteVisit from "@/components/VirtualSiteVisit";
+import PriceList from "@/components/PriceList";
 import MobileBottomNav from "@/components/MobileBottomNav";
 
 const Index = () => {
@@ -45,6 +47,14 @@ const Index = () => {
 
       <div id="location">
         <Location />
+      </div>
+
+      <div id="virtual-site-visit">
+        <VirtualSiteVisit />
+      </div>
+
+      <div id="price-list">
+        <PriceList />
       </div>
 
       <Footer />

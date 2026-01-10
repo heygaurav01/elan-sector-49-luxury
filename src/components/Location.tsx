@@ -1,4 +1,5 @@
 import { MapPin, Clock } from "lucide-react";
+import BlurGateway from "./BlurGateway";
 
 const Location = () => {
   const landmarks = [
@@ -43,16 +44,18 @@ const Location = () => {
 
         <div className="max-w-6xl mx-auto">
           <div className="bg-card rounded-lg shadow-lg overflow-hidden">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.355740667288!2d77.03865598848331!3d28.40852081335848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d23f0adb4d8b1%3A0x53d689bdda690228!2sElan%20Group%20Sector%2049!5e0!3m2!1sen!2sin!4v1764614791212!5m2!1sen!2sin"
-              width="100%"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Elan Sector 49 Location"
-            />
+            <BlurGateway title="View Location">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.355740667288!2d77.03865598848331!3d28.40852081335848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d23f0adb4d8b1%3A0x53d689bdda690228!2sElan%20Group%20Sector%2049!5e0!3m2!1sen!2sin!4v1764614791212!5m2!1sen!2sin"
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Elan Sector 49 Location"
+              />
+            </BlurGateway>
           </div>
         </div>
       </div>

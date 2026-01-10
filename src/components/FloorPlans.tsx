@@ -5,6 +5,7 @@ import { Download } from "lucide-react";
 import floorPlan from "@/assets/floor-plan.png";
 import masterPlan from "@/assets/master-plan.png";
 import LeadForm from "./LeadForm";
+import BlurGateway from "./BlurGateway";
 
 const FloorPlans = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -25,11 +26,13 @@ const FloorPlans = () => {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <div className="bg-card rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-            <img
-              src={floorPlan}
-              alt="Floor Plan"
-              className="w-full h-64 object-cover"
-            />
+            <BlurGateway title="View Floor Plan">
+              <img
+                src={floorPlan}
+                alt="Floor Plan"
+                className="w-full h-64 object-cover"
+              />
+            </BlurGateway>
             <div className="p-6">
               <h3 className="text-2xl font-bold mb-4">Floor Plan</h3>
               <Button
@@ -43,11 +46,13 @@ const FloorPlans = () => {
           </div>
 
           <div className="bg-card rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-            <img
-              src={masterPlan}
-              alt="Master Plan"
-              className="w-full h-64 object-cover"
-            />
+            <BlurGateway title="View Master Plan">
+              <img
+                src={masterPlan}
+                alt="Master Plan"
+                className="w-full h-64 object-cover"
+              />
+            </BlurGateway>
             <div className="p-6">
               <h3 className="text-2xl font-bold mb-4">Master Plan</h3>
               <Button
@@ -85,8 +90,8 @@ const FloorPlans = () => {
                 {dialogType === "floor"
                   ? "Download Floor Plan"
                   : dialogType === "master"
-                  ? "Download Master Plan"
-                  : "Download Price Sheet"}
+                    ? "Download Master Plan"
+                    : "Download Price Sheet"}
               </DialogTitle>
             </DialogHeader>
             <div className="mt-4">

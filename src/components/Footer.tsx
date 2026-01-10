@@ -1,11 +1,12 @@
 import { Phone, Mail, MapPin } from "lucide-react";
+import LeadForm from "./LeadForm";
 
 const Footer = () => {
   return (
     <footer className="bg-secondary text-secondary-foreground py-12">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
-          <div>
+        <div className="grid md:grid-cols-4 gap-8 mb-8">
+          <div className="md:col-span-1">
             <h3 className="text-3xl font-bold mb-4">
               <span className="text-primary">ELAN</span> Sector 49
             </h3>
@@ -13,12 +14,12 @@ const Footer = () => {
               Experience ultra-luxury living in the heart of Gurgaon. Premium 4 BHK apartments designed for those who appreciate the finer things in life.
             </p>
             <p className="text-xs opacity-75">
-              PROJECT RERA  No: APPLIED https://haryanarera.gov.in/
+              PROJECT RERA  No: RC/HARERA/GGM/0/0/2023/117 https://haryanarera.gov.in/
             </p>
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
+            <h4 className="text-lg font-semibold mb-4">Schedule Site Visit</h4>
             <div className="space-y-3">
               <a
                 href="tel:+918200801802"
@@ -60,6 +61,15 @@ const Footer = () => {
                 Location
               </a>
             </div>
+          </div>
+
+
+          <div className="col-span-1 md:col-span-1">
+            <LeadForm
+              title="Schedule Site Visit"
+              subtitle="Fill the form to book your visit"
+              className="shadow-none p-6"
+            />
           </div>
         </div>
 
