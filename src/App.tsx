@@ -29,7 +29,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/client-emperor">
         <AnalyticsWrapper>
           <Routes>
             <Route path="/" element={<Index />} />

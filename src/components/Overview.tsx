@@ -9,7 +9,7 @@ const Overview = () => {
     { icon: Layers, label: "Floors", value: "High Rise" }, // Generic if not specific
     { icon: Home, label: "Unit Variants", value: "4 & 5 BHK + SQ & Penthouses" },
     { icon: CheckCircle, label: "Status", value: "New Launch" },
-    { icon: CheckCircle, label: "RERA ID", value: "GGM/902/634/2025/05" },
+    { icon: CheckCircle, label: "RERA ID", value: "RC/HRERA/GGM/3758/3353/2025/635" },
   ];
 
   return (
