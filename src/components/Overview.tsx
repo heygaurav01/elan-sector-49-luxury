@@ -9,7 +9,7 @@ const Overview = () => {
     { icon: Layers, label: "Lobby", value: "Triple Height (40ft)" },
     { icon: Home, label: "Configuration", value: "4 BHK + Servant" },
     { icon: Layers, label: "Podium", value: "4th Floor Level" },
-    { icon: CheckCircle, label: "RERA ID", value: "GGM/645/377/2022/120" },
+    { icon: CheckCircle, label: "RERA ID", value: "RC/HRERA/GGM/3758/3353/2025/635" },
   ];
 
   return (

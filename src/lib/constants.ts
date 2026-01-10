@@ -1,6 +1,6 @@
 export const PROJECT_NAME = "Elan The Presidential";
 export const PROJECT_LOCATION = "Sector 106, Dwarka Expressway, Gurgaon";
-export const PROJECT_RERA = "GGM/645/377/2022/120";
+export const PROJECT_RERA = "RC/HRERA/GGM/3758/3353/2025/635";
 
 export const CONTACT_INFO = {
     phone: "+91 9111193575",
